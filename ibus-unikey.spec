@@ -1,7 +1,7 @@
 Summary:	Vietnamese engine for IBus input platform
 Name:		ibus-unikey
 Version:	0.5.1
-Release:	0.1
+Release:	1
 License:	GPL v3
 Group:		Libraries
 Source0:	http://ibus-unikey.googlecode.com/files/%{name}-%{version}.tar.gz
