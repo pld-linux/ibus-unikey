@@ -1,4 +1,5 @@
 Summary:	Vietnamese engine for IBus input platform
+Summary(pl.UTF-8):	Silnik wietnamski dla platformy wprowadzania znaków IBus
 Name:		ibus-unikey
 Version:	0.6.1
 Release:	1
@@ -8,9 +9,14 @@ Source0:	http://ibus-unikey.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	3bae6df0d4609a8c438c246030b9a61e
 URL:		http://code.google.com/p/ibus-unikey/
 BuildRequires:	GConf2-devel
-BuildRequires:	gtk+2-devel
-BuildRequires:	ibus-devel
-Requires:	ibus
+BuildRequires:	gettext-devel >= 0.17
+BuildRequires:	gtk+2-devel >= 2:2.12
+BuildRequires:	ibus-devel >= 1.2.99
+BuildRequires:	intltool
+BuildRequires:	libstdc++-devel
+BuildRequires:	pkgconfig
+BuildRequires:	xorg-lib-libX11-devel
+Requires:	ibus >= 1.2.99
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_libexecdir	%{_libdir}/ibus
@@ -18,11 +24,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A Vietnamese engine for IBus input platform that uses Unikey.
 
+%description -l pl.UTF-8
+Silnik wietnamski dla platformy wprowadzania znaków IBus. Wykorzystuje
+Unikey.
+
 %prep
 %setup -q
 
 %build
-%configure
+%configure \
+	--disable-silent-rules
 %{__make}
 
 %install
