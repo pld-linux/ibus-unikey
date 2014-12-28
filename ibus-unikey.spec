@@ -9,7 +9,7 @@ Source0:	http://ibus-unikey.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	3bae6df0d4609a8c438c246030b9a61e
 URL:		http://code.google.com/p/ibus-unikey/
 BuildRequires:	GConf2-devel
-BuildRequires:	gettext-devel >= 0.17
+BuildRequires:	gettext-tools >= 0.17
 BuildRequires:	gtk+2-devel >= 2:2.12
 BuildRequires:	ibus-devel >= 1.2.99
 BuildRequires:	intltool
