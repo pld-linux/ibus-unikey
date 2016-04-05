@@ -5,9 +5,10 @@ Version:	0.6.1
 Release:	1
 License:	GPL v3
 Group:		Libraries
+#Source0Download: https://github.com/mrlequoctuan/ibus-unikey/releases
 Source0:	http://ibus-unikey.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	3bae6df0d4609a8c438c246030b9a61e
-URL:		http://code.google.com/p/ibus-unikey/
+URL:		https://github.com/mrlequoctuan/ibus-unikey
 BuildRequires:	GConf2-devel
 BuildRequires:	gettext-tools >= 0.17
 BuildRequires:	gtk+2-devel >= 2:2.12
